@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class person {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int ewq = sc.nextInt();
+
+        switch (ewq) {
+            case 1:
+                System.out.println("курьер");
+                break;
+            case 2:
+                System.out.println("самовывоз");
+                break;
+            case 3:
+                System.out.println("доставка +500 за доставку");
+                break;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,54 @@
+import java.time.LocalDate;
+import java.util.Scanner;
+
+class SeasonalDiscounts {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        int currentMonth = LocalDate.now().getMonthValue();
+
+        System.out.println("Выберите товар (кондиционер, холодильник, обогреватель, ноутбук): ");
+        String product = sc.next().toLowerCase(); // Делаем ввод нечувствительным к регистру
+
+        System.out.println("Введите сумму покупки (в тенге): ");
+        double amount = sc.nextDouble();
+
+        System.out.println("Вы оформляете рассрочку? (да/нет): ");
+        String installment = sc.next().toLowerCase();
+
+        double discount = 0; // Начальная скидка
+
+        if (currentMonth >= 6 && currentMonth <= 8) { // Лето (июнь-август)
+            if (product.equals("кондиционер")) {
+                discount = amount * 0.15;
+            } else if (product.equals("холодильник")) {
+                discount = amount * 0.10;
+            }
+        } else if (currentMonth == 12 || currentMonth == 1 || currentMonth == 2) { // Зима (декабрь-февраль)
+            if (product.equals("обогреватель")) {
+                discount = amount * 0.20;
+            } else if (product.equals("ноутбук")) {
+                discount = amount * 0.05;
+            }
+        }
+
+
+        if (installment.equals("да")) {
+            discount /= 2;
+        }
+
+        // Если сумма заказа > 500000 тенге, фиксированная скидка 50000 тенге
+        if (amount > 500000) {
+            discount = Math.max(discount, 50000); // Применяем максимальную скидку
+        }
+
+
+        double finalAmount = amount - discount;
+
+        System.out.println("Сезонная скидка: " + discount + " тенге");
+        System.out.println("Итого к оплате: " + finalAmount + " тенге");
+
+        sc.close();
+    }
+}

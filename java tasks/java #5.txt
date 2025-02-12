@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Person {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Choose category (a, b, c, d):");
+
+        String ewq = sc.next(); 
+
+        switch (ewq) {
+            case "a":
+                System.out.println("A");
+                break;
+            case "b":
+                System.out.println("Самовывоз");
+                break;
+            case "c":
+            case "d":
+                System.out.println("Доставка +500 за доставку");
+                break;
+            default:
+                System.out.println("Ошибка: такой категории нет.");
+        }
+    }
+}

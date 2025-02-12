@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Person {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int buy = 3000;
+        boolean aaa = false;
+
+        if (buy <= 3000) {
+            int res = buy - 500;
+            System.out.println(res);
+        } else if (buy >= 3000 && buy <=10000) {
+            int dsd = buy - 1000;
+            System.out.println(dsd);
+        } else if (buy >= 10000) {
+            int ww = buy - 1500;
+            System.out.println(ww);
+        } else if (aaa = true) {
+            int dd = buy - 300;
+            System.out.println(dd);
+        } else if (buy >= 20000) {
+            int nn = buy + 500;
+        }
+    }
+}

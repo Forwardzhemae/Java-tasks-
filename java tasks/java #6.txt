@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+class Person {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Choose category (a, b, c, d):");
+
+        int ewq = sc.nextInt();
+
+        switch (ewq) {
+            case 1:
+                System.out.println("expresso");
+                break;
+            case 2:
+                System.out.println("latte");
+                break;
+            case 3:
+                System.out.println("capuchino");
+            case 4:
+                System.out.println("tea");
+                break;
+            default:
+                System.out.println("Ошибкa");
+        }
+    }
+}
