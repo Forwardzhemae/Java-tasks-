@@ -1,0 +1,141 @@
+// Math
+int max = Math.max(10, 20);
+
+// Booleans
+boolean isJavaFun = true;
+
+// If...Else
+if (age >= 18) System.out.println("Adult");
+else System.out.println("Minor");
+
+// Switch
+switch (day) {
+  case 1 -> System.out.println("Monday");
+  case 2 -> System.out.println("Tuesday");
+}
+
+// While Loop
+int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}
+
+// For Loop
+for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+
+// Break/Continue
+for (int i = 0; i < 5; i++) {
+  if (i == 3) break;
+  System.out.println(i);
+}
+
+// Arrays
+int[] nums = {1, 2, 3};
+System.out.println(nums[0]);
+
+// Methods
+int sum(int a, int b) {
+  return a + b;
+}
+
+// Method Parameters
+void greet(String name) {
+  System.out.println("Hello " + name);
+}
+
+// Method Overloading
+int sum(int a, int b) { return a + b; }
+double sum(double a, double b) { return a + b; }
+
+// Scope
+int x = 10;
+void printX() {
+  System.out.println(x);
+}
+
+// Recursion
+int factorial(int n) {
+  if (n == 1) return 1;
+  return n * factorial(n - 1);
+}
+
+// Classes/Objects
+class Car {
+  String model = "Toyota";
+}
+Car myCar = new Car();
+
+// Class Attributes
+class Person {
+  int age = 21;
+}
+
+// Class Methods
+class Animal {
+  void sound() {
+    System.out.println("Roar");
+  }
+}
+
+// Constructors
+class Book {
+  String title;
+  Book(String t) {
+    title = t;
+  }
+}
+
+// Modifiers
+public int x = 5;
+private int y = 3;
+
+// Encapsulation
+class Student {
+  private int grade;
+  void setGrade(int g) { grade = g; }
+  int getGrade() { return grade; }
+}
+
+// Packages / API
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+
+// Inheritance
+class Dog extends Animal {
+  void bark() {}
+}
+
+// Polymorphism
+Animal obj = new Dog();
+obj.eat();
+
+// Inner Classes
+class Outer {
+  class Inner {
+    int x = 5;
+  }
+}
+
+// Abstraction
+abstract class Shape {
+  abstract void draw();
+}
+
+// Interface
+interface Vehicle {
+  void move();
+}
+
+// Enums
+enum Day { MON, TUE, WED }
+
+// User Input
+Scanner scanner = new Scanner(System.in);
+String name = scanner.nextLine();
+
+// Date
+import java.time.LocalDate;
+LocalDate date = LocalDate.now();
